@@ -1,0 +1,7 @@
+<mat-card>
+  <mat-selection-list>
+    <mat-list-item *ngFor="let task of tasks$ | async">
+      <task-item [task]="task"></task-item>
+    </mat-list-item>
+  </mat-selection-list>
+</mat-card>
