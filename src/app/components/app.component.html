@@ -1,0 +1,14 @@
+<div id="app-container" fxLayout="column">
+  <mat-toolbar fxLayout="row" fxLayoutAlign="space-between center">
+    <span>{{appName}}</span>
+  </mat-toolbar>
+
+  <main class="container" fxFlex="1">
+    <div fxLayout="column">
+      <task-list></task-list>
+      <mat-card>
+        <task-edit></task-edit>
+      </mat-card>
+    </div>
+  </main>
+</div>

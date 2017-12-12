@@ -1,0 +1,20 @@
+#app-container {
+  height: calc(100% - 2rem);
+  margin: 1rem;
+}
+
+main.container {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+
+  >div {
+    width: 450px;
+  }
+}
+
+mat-card {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
