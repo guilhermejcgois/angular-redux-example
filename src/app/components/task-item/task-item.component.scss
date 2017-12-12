@@ -1,0 +1,19 @@
+:host {
+  width: 100%;
+  display: block;
+}
+
+mat-expansion-panel.mat-expansion-panel {
+  box-shadow: none;
+  background: transparent;
+  &:hover {
+    background: transparent;
+  }
+
+  mat-expansion-panel-header.mat-expansion-panel-header {
+    padding: 0;
+    &:hover {
+      background: transparent;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      <mat-checkbox [(ngModel)]="task.completed">{{ task?.title }}</mat-checkbox>
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <ng-container *ngIf="editing">
+    <task-edit [cancelable]="true" [task]="task" (close)="editing=false"></task-edit>
+  </ng-container>
+  <ng-container *ngIf="!editing">
+    {{ task?.description || 'No description' }}
+    <mat-action-row>
+      <!-- TODO Implement task delete -->
+      <button mat-button color="secondary">Delete</button>
+      <button mat-button color="primary" (click)="editing=true">Edit</button>
+  </mat-action-row>
+  </ng-container>
+</mat-expansion-panel>
