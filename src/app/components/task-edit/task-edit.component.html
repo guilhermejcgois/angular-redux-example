@@ -1,0 +1,16 @@
+<div fxLayout="column">
+  <mat-form-field class="full-width">
+    <input [(ngModel)]="unsafeTask.title" matInput #message maxlength="32" placeholder="Title" required>
+    <mat-hint align="start"><strong>Every task need an awesome title!</strong> </mat-hint>
+    <mat-hint align="end">{{message.value.length}} / 32</mat-hint>
+  </mat-form-field>
+
+  <mat-form-field class="full-width">
+    <input [(ngModel)]="unsafeTask.description" matInput maxlength="64" placeholder="Description">
+  </mat-form-field>
+
+  <div fxLayout="row-reverse">
+    <button mat-button (click)="save()">Save</button>
+    <button mat-button (click)="close.emit()" *ngIf="cancelable">Cancel</button>
+  </div>
+</div>
